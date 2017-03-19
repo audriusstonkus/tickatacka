@@ -83,8 +83,8 @@ namespace TickaTacka
 				service.Start();
 				service.WaitForStatus(ServiceControllerStatus.Running, timeout);
 			}
-			catch {
-				// ...
+			catch (Exception ex) {
+				MessageBox.Show("Fehler: " + ex.Message);
 			}
 		}
 		
